@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
-import Input from "./ui/input";
-import Link from "next/link";
+import Input from "../ui/input";
 import { useState } from "react";
 
 export default function Home() {
@@ -17,9 +15,13 @@ export default function Home() {
   };
 
   return (
-    <section className="flex flex-col  justify-center items-center gap-4  w-screen h-screen  rounded-md p-4">
+    <section className="flex flex-col  justify-center items-center gap-4  w-screen h-full  rounded-md p-4">
       <h2 className="text-3xl self-start">¡Bienvenido a SePrice!</h2>
       <form className="flex flex-col gap-4 bg-slate-500 w-1/2 rounded-md p-2">
+        <h3 className="text-4xl text-slate-100">Registrarse</h3>
+        <Input label="Nombre" type={"text"} />
+        <Input label="Apellido" type={"text"} />
+        <Input label="Email" type={"email"} />
         <Input label="Tipo de documento" type={"text"} />
         <Input label="Numero de documento" type={"number"} />
         <div>
@@ -27,11 +29,7 @@ export default function Home() {
           <button onClick={togglePassword}>Mostrar Contraseña</button>
         </div>
 
-        <button className="bg-slate-400 p-2 rounded-md">Iniciar Sesion</button>
-
-        <p>
-          No tienes cuenta? <Link href="/registrarse">Registrate</Link>
-        </p>
+        <button className="bg-slate-400 p-2 rounded-md">Registrarse</button>
       </form>
     </section>
   );
