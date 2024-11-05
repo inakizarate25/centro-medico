@@ -1,4 +1,5 @@
 "use client";
+import NavBar from "./ui/navBar";
 import Image from "next/image";
 import Input from "./ui/input";
 import Link from "next/link";
